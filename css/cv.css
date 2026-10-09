@@ -60,7 +60,8 @@ nav li a:hover {
     background: rgba(0, 0, 0, 0.7);
 }
 
-/* --- Conteneur Grid (Section + Aside) --- */
+/* --- Conteneur Grid & Placement de la grille --- */
+/* --- Conteneur Grid & Placement précis des éléments --- */
 .main-container {
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -68,12 +69,29 @@ nav li a:hover {
     padding: 0 25px;
     max-width: 1200px;
     margin: 0 auto;
+    align-items: start;
 }
 
+/* La section occupe la colonne de gauche */
 section {
     width: 100%;
+    grid-column: 1;
+    grid-row: 1 / span 3; /* Couvre toute la hauteur à gauche */
 }
 
+/* Compétences : aligné en haut à droite (à côté d'Expériences) */
+#Compétences {
+    grid-column: 2;
+    grid-row: 1;
+    margin-bottom: 0; /* Évite les décalages si besoin */
+}
+
+/* Contact : positionné précisément sur la 2e ligne à droite (à côté de Formations) */
+#Contact {
+    grid-column: 2;
+    grid-row: 2;
+    margin-top: 0;
+}
 /* --- Articles & Aside (Les blocs avec ombres et coins arrondis) --- */
 article, aside {
     background: white;
@@ -141,91 +159,3 @@ footer p {
     font-size: 0.95rem;
     letter-spacing: 0.5px;
 }
-
-/*
-.border1{
-    types: solid;
-    padding: 1px;
-    color: "gray"
-
-}
-
-header{
-    color: white;
-    background-image: url(../images/header.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    text-align: right;
-}
-
-nav{
-    text-align: left;
-    height: 2%;
-    width: 100%;
-    
-}
-
-nav ul{
-    padding: 0;
-    margin: 0;
-    list-style-type: none;
-}
-
-nav li{
-    display: inline-block;
-    width: 10%;
-}
-
-nav li a{
-    color: white;
-    text-decoration-line: none;
-}
-
-nav li a:hover {
-    font-weight: bold;
-}
-
-
-
-body{
-    margin: 0%;
-    background-color: lightgray;
-    font: Arial;
-    height: 0.9rem;
-}
-
-section{
-    margin: 0%;
-    position: relative;
-    height: 50vh;
-    width: 60vw;
-}
-
-article ul{
-    list-style-type: none;
-}
-
-article h3{
-    color: #2715cb;
-    font-style: italic;
-}
-
-aside{
-    position: relative;
-    margin-left: 60vw;
-    margin-top: -50vh;
-}
-
-aside li{
-    list-style-type: none;
-}
-
-footer{
-    position: fixed;
-    text-align: center;
-    bottom: 0;
-    color: white;
-    background-color: #060325;
-    width: 100%;
-}
-    */
