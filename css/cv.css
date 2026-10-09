@@ -1,0 +1,231 @@
+/* --- Correction du défilement horizontal --- */
+html, body {
+    overflow-x: hidden; /* Empêche tout dépassement horizontal */
+    width: 100%;
+}
+
+/* --- Styles globaux --- */
+body {
+    margin: 0;
+    background-color: #f4f7f6;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+/* --- Header avec image de fond --- */
+header {
+    color: white;
+    background-image: url('../images/header.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: right;
+    padding: 40px 25px;
+    border-radius: 0 0 16px 16px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    margin-bottom: 25px;
+}
+
+header h1, header p, header a {
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* --- Navigation --- */
+nav {
+    text-align: left;
+    width: 100%;
+    margin-top: 20px;
+}
+
+nav ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+nav li a {
+    color: white;
+    text-decoration: none;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 6px 14px;
+    border-radius: 6px;
+    transition: background 0.3s;
+}
+
+nav li a:hover {
+    font-weight: bold;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+/* --- Conteneur Grid (Section + Aside) --- */
+.main-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 25px;
+    padding: 0 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+section {
+    width: 100%;
+}
+
+/* --- Articles & Aside (Les blocs avec ombres et coins arrondis) --- */
+article, aside {
+    background: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    border-top: 4px solid #2715cb;
+}
+
+aside {
+    height: fit-content;
+}
+
+article h3, aside h3 {
+    color: #2715cb;
+    font-style: italic;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 8px;
+    margin-top: 0;
+}
+
+article ul, aside ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+article li, aside li {
+    padding: 8px 0;
+    border-bottom: 1px solid #f9f9f9;
+}
+
+article li:last-child, aside li:last-child {
+    border-bottom: none;
+}
+
+/* --- Footer discret --- */
+footer {
+    position: static;
+    text-align: center;
+    margin-top: 50px;
+    color: white;
+    background-color: #060325;
+    width: 100%;
+    padding: 30px 20px;
+    border-radius: 12px 12px 0 0;
+    box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.05);
+}
+
+footer img {
+    vertical-align: middle;
+    margin-bottom: 10px;
+    opacity: 0.9;
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+footer img:hover {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+footer p {
+    margin: 5px 0 0 0;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+}
+
+/*
+.border1{
+    types: solid;
+    padding: 1px;
+    color: "gray"
+
+}
+
+header{
+    color: white;
+    background-image: url(../images/header.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: right;
+}
+
+nav{
+    text-align: left;
+    height: 2%;
+    width: 100%;
+    
+}
+
+nav ul{
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+nav li{
+    display: inline-block;
+    width: 10%;
+}
+
+nav li a{
+    color: white;
+    text-decoration-line: none;
+}
+
+nav li a:hover {
+    font-weight: bold;
+}
+
+
+
+body{
+    margin: 0%;
+    background-color: lightgray;
+    font: Arial;
+    height: 0.9rem;
+}
+
+section{
+    margin: 0%;
+    position: relative;
+    height: 50vh;
+    width: 60vw;
+}
+
+article ul{
+    list-style-type: none;
+}
+
+article h3{
+    color: #2715cb;
+    font-style: italic;
+}
+
+aside{
+    position: relative;
+    margin-left: 60vw;
+    margin-top: -50vh;
+}
+
+aside li{
+    list-style-type: none;
+}
+
+footer{
+    position: fixed;
+    text-align: center;
+    bottom: 0;
+    color: white;
+    background-color: #060325;
+    width: 100%;
+}
+    */
