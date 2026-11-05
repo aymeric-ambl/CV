@@ -1,0 +1,214 @@
+/* Style global de la page */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #333;
+}
+
+/* Conteneur principal du formulaire (Centré et moderne) */
+form {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    box-sizing: border-box;
+}
+
+/* En-tête du formulaire */
+.form-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.form-header h2 {
+    margin: 0 0 10px 0;
+    color: #2c3e50;
+}
+
+.form-header p {
+    color: #7f8c8d;
+    font-size: 14px;
+    margin: 0;
+}
+
+/* Fieldset et structure */
+fieldset {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #fafbfc;
+}
+
+legend {
+    font-weight: bold;
+    color: #2c3e50;
+    padding: 0 10px;
+}
+
+/* Groupes de champs (label + input alignés proprement) */
+.form-group {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #34495e;
+}
+
+/* Style commun pour les champs de saisie */
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #dcdde1;
+    border-radius: 6px;
+    font-size: 14px;
+    box-sizing: border-box;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    background-color: #fff;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+select:focus,
+textarea:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+    outline: none;
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* Case à cocher */
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 20px 0;
+    font-size: 13px;
+}
+
+.checkbox-group input {
+    cursor: pointer;
+}
+
+.checkbox-group label {
+    margin-bottom: 0;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+/* Actions (Boutons) */
+.form-actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.form-actions > div {
+    flex: 1;
+}
+
+.form-actions input[type="submit"],
+.form-actions input[type="reset"] {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+/* Bouton Envoyer */
+#envoi input {
+    background-color: #2ecc71;
+    color: white;
+}
+
+#envoi input:hover {
+    background-color: #27ae60;
+}
+
+/* Bouton Réinitialiser */
+#reset input {
+    background-color: #e74c3c;
+    color: white;
+}
+
+#reset input:hover {
+    background-color: #c0392b;
+}
+
+.error{
+    color: red;
+    font-size: 0.9em;
+    margin-top: 2px;
+}
+
+/***
+form
+{
+    text-align: center;
+    width: 70%;
+}
+
+fieldset
+{
+    position: relative;
+    margin-left: 40%;
+}
+
+fieldset div
+{
+    margin: 5%;
+}
+
+#sujet
+{
+    margin-left: 40%;
+}
+
+#message
+{
+    margin-left: 22%;
+}
+
+footer
+{
+    margin-left: 40%;
+}
+
+label
+{
+    font-family: Arial, sans-serif;
+}
+
+#envoi input
+{
+    color: green;
+}
+
+#reset input
+{
+    color: red;
+}
+
+--- */

@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Contact</title>
+    <link rel="stylesheet" type="text/css" href="css/contact.css">
 </head>
 
 <body>
@@ -14,19 +15,23 @@
             
                 <div id="nom">
                     <label for="nom">Nom :</label>
-                    <input type="text" id="nom" name="nom" required size="20" minlength="2" maxlength="30">
+                    <input type="text" id="nom" name="nom" required placeholder="Votre nom" size="20" minlength="2" maxlength="30">
+                    <div class="error" id="nom_error"></div>
                 </div>
                 <div id="prenom">
                     <label for="prenom">Prénom :</label>
-                    <input type="text" id="prenom" name="prenom" required size="20" minlength="2" maxlength="30">
+                    <input type="text" id="prenom" name="prenom" required placeholder="Votre prénom" size="20" minlength="2" maxlength="30">
+                    <div class="error" id="prenom_error"></div>
                 </div>
                 <div id="email">
                     <label for="email">Email :</label>
-                    <input type="email" id="email" name="email" required size="20" minlength="2" maxlength="50">
+                    <input type="email" id="email" name="email" required placeholder="exemple@domaine.com" size="20" minlength="2" maxlength="50">
+                    <div class="error" id="email_error"></div>
                 </div>
                 <div id="tel">
                     <label for="tel">Téléphone :</label>
-                    <input type="text" id="tel" name="tel" required size="20" pattern="[0-9]{2}.[0-9]{2}.[0-9]{2}.[0-9]{2}.[0-9]{2}">
+                    <input type="text" id="tel" name="tel" required placeholder="06.12.34.56.78" size="20" pattern="[0-9]{2}.[0-9]{2}.[0-9]{2}.[0-9]{2}.[0-9]{2}">
+                    <div class="error" id="tel_error"></div>
                 </div>
             
         </fieldset>
@@ -38,9 +43,10 @@
                 <option value="Autre">Autre</option>
             </select>
         </div>
-        <div>
+        <div id="message">
             <label for="message"></label>
-            <textarea id="message" required></textarea>
+            <textarea id="message" placeholder="Écrivez votre message ici..." required></textarea>
+            <div class="error" id="msg_error"></div>
         </div>
 
     </main>
@@ -48,6 +54,7 @@
         <div id="croix">
             <input type="checkbox" id="vendre ame" name="accept" required>
             <label for="vendre ame">J'accepte que mes données soient utilisées pour ce contact</label>
+            <div class="error" id="ame_error"></div>
         </div>
         <div id="envoi">
             <input type="submit" id="boutton" name="boutton" formaction="envoi.html">
